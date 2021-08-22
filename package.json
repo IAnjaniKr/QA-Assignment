@@ -1,0 +1,20 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules\\.bin\\cypress run",
+    "headTest": "npm run test -- --headed --reporter mochawesome",
+    "chromeTest": "npm run test -- --browser chrome --reporter mochawesome",
+    "mochatest": "npm run test --spec cypress/integration/Swap-Api-Tests/*.js --reporter mochawesome --parallel"
+  },
+  "author": "AnjaniKumar",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^8.3.0",
+    "mocha": "^9.1.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-report-generator": "^5.2.0"
+  }
+}

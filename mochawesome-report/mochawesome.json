@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-22T19:51:57.179Z",
+    "end": "2021-08-22T19:51:58.980Z",
+    "duration": 1801,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cbddefe0-6d3d-462d-8707-a8e444b3c0cf",
+      "title": "",
+      "fullFile": "cypress/integration/Swap-Api-Tests/TestCase_02.js",
+      "file": "cypress/integration/Swap-Api-Tests/TestCase_02.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "cf37e6f5-60b3-4db4-b916-243dc94dfd43",
+          "title": "Get Details of Luke Skywalker",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test Case - Get Basic Details of Luke Skywalker",
+              "fullTitle": "Get Details of Luke Skywalker Test Case - Get Basic Details of Luke Skywalker",
+              "timedOut": null,
+              "duration": 1697,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: 'https://swapi.dev/api/people'\n}).then(response => {\n  expect(response.body.results[0].name).to.equal('Luke Skywalker');\n  expect(response.body.results[0].height).to.equal('172');\n  expect(response.body.results[0].mass).to.equal('77');\n  expect(response.body.results[0].hair_color).to.equal('blond');\n  expect(response.body.results[0].skin_color).to.equal('fair');\n  expect(response.body.results[0].eye_color).to.equal('blue');\n  expect(response.body.results[0].birth_year).to.equal('19BBY');\n  expect(response.body.results[0].gender).to.equal('male');\n  expect(response.body.results[0].homeworld).to.equal('https://swapi.dev/api/planets/1/');\n  cy.request({\n    method: 'GET',\n    url: 'https://swapi.dev/api/planets/1/'\n  }).then(response => {\n    expect(response.body.name).to.equal('Tatooine');\n    cy.request({\n      method: 'GET',\n      url: 'https://swapi.dev/api/people/1/'\n    }).then(response => {\n      expect(response.body.name).to.equal('Luke Skywalker');\n    });\n  });\n});",
+              "err": {},
+              "uuid": "3cbd3290-d50c-4465-acdf-c515e1963dec",
+              "parentUUID": "cf37e6f5-60b3-4db4-b916-243dc94dfd43",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3cbd3290-d50c-4465-acdf-c515e1963dec"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1697,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
